@@ -4,8 +4,7 @@ import { createBdd } from "playwright-bdd";
 const { Given, When, Then } = createBdd();
 
 Given("Admin is on the home page", async ({}) => {
-  // Step: Given Admin is on the home page
-  // From: tests/features/Batch.feature:4:1
+  test({});
 });
 
 When("Admin clicks Batch menu from the top navigation bar", async ({}) => {
