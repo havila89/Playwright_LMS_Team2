@@ -1,0 +1,1 @@
+Feature: Batch page validations
