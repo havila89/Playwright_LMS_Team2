@@ -1,0 +1,172 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "batch-module;verify-batch-link-is-working-in-top-navigation-bar",
+        "keyword": "Scenario",
+        "line": 7,
+        "name": "Verify Batch link is working in Top navigation bar",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 253938375
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "Admin logs into the application",
+            "match": {
+              "location": "tests/steps/BatchSteps.js:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 976920916
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "AdminHavila is in the dashboard",
+            "match": {
+              "location": "tests/steps/BatchSteps.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 185961042
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 9,
+            "name": "AdminHavila clicks on Batch link in Top navigation bar",
+            "match": {
+              "location": "tests/steps/BatchSteps.js:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 65353082
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 10,
+            "name": "AdminHavila can see the ManageBatch Page",
+            "match": {
+              "location": "tests/steps/BatchSteps.js:34"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5194916
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 21307874
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "batch-module;verify-managepage-ui",
+        "keyword": "Scenario",
+        "line": 12,
+        "name": "Verify managePage UI",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 321577166
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "Admin logs into the application",
+            "match": {
+              "location": "tests/steps/BatchSteps.js:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 831692000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 13,
+            "name": "AdminHavila is in the dashboard",
+            "match": {
+              "location": "tests/steps/BatchSteps.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 196414209
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 14,
+            "name": "AdminHavila clicks on Batch link in Top navigation bar",
+            "match": {
+              "location": "tests/steps/BatchSteps.js:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 77089500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 15,
+            "name": "AdminHavila should verify ManageBatch Page UI",
+            "match": {
+              "location": "tests/steps/BatchSteps.js:39"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 5123534167,
+              "error_message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('p-tableheadercheckbox').getByRole('checkbox', { name: '' }).first()\nExpected: visible\nReceived: hidden\nCall log:\n\u001b[2m  - locator._expect with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('p-tableheadercheckbox').getByRole('checkbox', { name: '' }).first()\u001b[22m\n\u001b[2m    9 × locator resolved to <input type=\"checkbox\"/>\u001b[22m\n\u001b[2m      - unexpected value \"hidden\"\u001b[22m\n\n    at Proxy.<anonymous> (/Users/havilabenie/Desktop/LMS_PW_Cucumber/node_modules/playwright/lib/matchers/expect.js:254:37)\n    at BatchPage.thChkButtonVisible (/Users/havilabenie/Desktop/LMS_PW_Cucumber/tests/pages/BatchPage.js:75:36)\n    at World.<anonymous> (/Users/havilabenie/Desktop/LMS_PW_Cucumber/tests/steps/BatchSteps.js:52:26)"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 25237708
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "batch-module",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Batch Module",
+    "tags": [],
+    "uri": "tests/features/Batch.feature"
+  }
+]
