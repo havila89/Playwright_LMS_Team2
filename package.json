@@ -9,6 +9,7 @@
   "license": "ISC",
   "description": "",
   "devDependencies": {
+    "@cucumber/messages": "^27.2.0",
     "@playwright/test": "^1.51.1",
     "@types/node": "^22.13.10"
   },

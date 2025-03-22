@@ -50,5 +50,44 @@ Then(
     await this.batchPage.numClassColVisible();
     await this.batchPage.editDelColVisible();
     await this.batchPage.thChkButtonVisible();
+    await this.batchPage.batchNameColSortVisible();
+    await this.batchPage.batchDesColSortVisible();
+    await this.batchPage.batchStatusColSortVisible();
+    await this.batchPage.numClassColSortVisible();
+    await this.batchPage.pgmNameColSortVisible();
+    await this.batchPage.addNewBatchBtnVisible();
   }
 );
+//scenario3
+When("AdminHavila clicks on the Add new Batch button", async function () {
+  console.log("I am in scenario 3");
+  this.pm = new PageManager(this.page);
+  this.batchPage = this.pm.getBatchPage();
+  await this.batchPage.addNewBatchBtnClick();
+});
+
+Then(
+  "AdminHavila should verify Add new Batch popup elements",
+  async function () {
+    await this.batchPage.batchDetailsPopupVisible();
+    await this.batchPage.batchDetailsHeadingVisible();
+    await this.batchPage.pgmNameLabelVisible();
+    await this.batchPage.pgmDropdownEnabled();
+    await this.batchPage.prefixCheck();
+  }
+);
+
+// //search scenario
+// Given("AdminHavila is in ManageBatch Page", async function () {
+//   await this.batchPage.verifyBatchPageTitle();
+// });
+
+// When("AdminHavila searches using text", async function () {
+//   // Write code here that turns the phrase above into concrete actions
+//   return "pending";
+// });
+
+// Then("AdminHavila should see the filtered batches only", async function () {
+//   // Write code here that turns the phrase above into concrete actions
+//   return "pending";
+// });
