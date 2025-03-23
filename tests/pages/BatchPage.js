@@ -61,7 +61,12 @@ class BatchPage {
     this.descriTextBox = page.locator("//input[@id='batchDescription']");
     this.numOfClassesLabel = page.getByLabel("Number of Classes ");
     this.numofClassesTextbox = page.locator("//input[@id='batchNoOfClasses']");
-    this.pgmNameDropdown = page.locator("//ul[@role='listbox']");
+    this.pgmNameDropdown = page.locator(
+      "//ul[@role='listbox']/p-dropdownitem/li"
+    );
+    this.pgmNameListFirst = page.locator(
+      "//ul[@role='listbox']/p-dropdownitem/li[1]"
+    );
   }
 
   async visibleBatchBtn() {
@@ -160,17 +165,25 @@ class BatchPage {
     await expect(this.numofClassesTextbox).toHaveAttribute("type", "text");
   }
   async prefixCheck() {
-    // console.log(this.pgmDropdown.selectOption({ index: 1 }));
-    // await this.pgmDropdown.selectOption({ index: 1 });
     await this.pgmDropdownBtn.click();
-    // const pgmNameDropdownStrings = await this.pgmNameDropdown.textContent();
-    // console.log(pgmNameDropdownStrings);
-    // for (const row of await this.pgmNameDropdown.all())
-    //   console.log(await row.textContent());
-    const rows = page.getByRole("listitem");
-    const texts = await rows.evaluateAll((list) =>
-      list.map((element) => element.textContent)
-    );
+    const count = await this.pgmNameDropdown.count();
+    const pgmNamelist = await this.pgmNameDropdown.all();
+    console.log(count);
+
+    // if (count > 0) {
+    //   await pgmNamelist.nth(0).click();
+    //   console.log(await pgmNamelist.nth(0).textContent());
+    // } else {
+    //   console.log("No programs present at this time");
+    // }
+    // for (const listitem of pgmNamelist) {
+    //   console.log(await listitem.textContent());
+    // }
+    // for (i = 0; i < count; i++) {
+    //   console.log(await pgmNamelist.nth(i).textContent());
+    // }
+    const pgmNamelistFirst = await this.pgmNameListFirst.textContext();
+    console.log(pgmNamelistFirst);
   }
 }
 module.exports = { BatchPage };

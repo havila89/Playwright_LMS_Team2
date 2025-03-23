@@ -73,7 +73,7 @@ Then(
     await this.batchPage.batchDetailsHeadingVisible();
     await this.batchPage.pgmNameLabelVisible();
     await this.batchPage.pgmDropdownEnabled();
-    await this.batchPage.prefixCheck();
+    //await this.batchPage.prefixCheck();
   }
 );
 
